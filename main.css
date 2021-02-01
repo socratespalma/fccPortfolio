@@ -1,11 +1,164 @@
+:root {
+  --blackish: #333;
+  --blueish: #6c8ead;
+  --pinkish: #fbbfca;
+  --red: #a23e48;
+  --bronze: #d58936;
+  --limish: #f2f3ae;
+  --whitish: whitesmoke;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  /* Change this when you have better light - turn off "night mode" lmao*/
+  background-color: var(--blackish);
+  color: var(--whitish);
+}
+
+#navbar {
+  background-color: var(--red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  font-size: 1.2rem;
+  padding: 0 9vw;
+  /* transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+#navbar a,
+.social div a {
+  text-decoration: none;
+  color: var(--whitish);
+}
+
+.logo {
+  border: 2px solid var(--whitish);
+  padding: 3.3px;
+  font-weight: 700;
+}
+
+#navbar div {
+  width: 20vw;
+}
+
+#navbar div a {
+  padding: 0 1vw;
 }
 
 #welcome-section {
   height: 100vh;
+  background: url("https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat center;
+  background-size: cover;
+  text-align: right;
 }
 
-/* colors https://coolors.co/3c1518-69140e-a44200-d58936-f2f3ae */
+#welcome-section h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+#welcome-section h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 1vh;
+}
+
+#welcome-section div {
+  padding-top: 20%;
+  padding-right: 9vw;
+  color: var(--blackish);
+}
+
+#projects {
+  background-color: var(--bronze);
+}
+
+#projects h2 {
+  text-align: center;
+  padding-top: 5%;
+  font-size: 1.5rem;
+}
+
+.project-grid {
+  display: grid;
+}
+
+.project-grid img:first-child {
+  background-color: var(--whitish);
+}
+
+.project-grid img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-tile {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.inside {
+  background-color: var(--blackish);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.inside a i,
+.inside p {
+  color: var(--whitish);
+  font-size: 1.5rem;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.inside a .codepen,
+.inside a .github {
+  top: 60%;
+}
+
+.inside a .codepen {
+  left: 40%;
+}
+
+.inside a .github {
+  left: 60%;
+}
+
+.inside p {
+  top: 40%;
+  left: 50%;
+}
+
+div .project-tile:hover .inside {
+  opacity: 0.9;
+}
+
+#contact-section {
+  background-color: var(--blueish);
+}
+
+footer {
+  background-color: var(--pinkish);
+}
