@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#welcome-section {
+  height: 100vh;
+}
+
+/* colors https://coolors.co/3c1518-69140e-a44200-d58936-f2f3ae */
