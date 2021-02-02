@@ -15,6 +15,10 @@
   font-family: "Lato", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -167,6 +171,10 @@ div .project-tile:hover .inside {
 
 #contact-section {
   background-color: var(--blueish);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 footer {
