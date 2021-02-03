@@ -40,7 +40,8 @@ body {
 }
 
 #navbar a,
-.social div a {
+.cta,
+.social a {
   text-decoration: none;
   color: var(--whitish);
 }
@@ -53,11 +54,19 @@ body {
 }
 
 #navbar div {
-  width: 20vw;
+  width: 60vw;
+  /* background-color: red; */
+  text-align: right;
 }
 
 #navbar div a {
-  padding: 0 1vw;
+  padding: 0 1vw 0.3rem;
+}
+
+#navbar div a:hover {
+  border-bottom: 1px solid var(--whitish);
+  /* padding-bottom: 0.3rem; */
+  transition: all 0.3s ease 0s;
 }
 
 #welcome-section {
@@ -86,26 +95,42 @@ body {
   color: var(--blackish);
 }
 
+.cta {
+  display: inline-block;
+  background-color: var(--blueish);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  /* margin-right: 50vw; */
+}
+
 #projects {
   background-color: var(--whitish);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
 }
 
 #projects h2 {
-  text-align: center;
-  padding-top: 5%;
+  /* text-align: center; */
+  /* padding-top: 5%; */
   font-size: 2rem;
 }
 
 .project-grid {
   /* make padding wider in media queries when screensize decreases */
-  padding: 3rem 9vw 6rem;
+  padding: 3rem 9vw 3rem;
   display: grid;
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 300px;
+  gap: 4rem;
+  grid-template-columns: repeat(3, 300px);
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px; */
   /* grid-auto-flow: dense; */
 }
 
@@ -116,6 +141,7 @@ body {
 .project-grid img {
   width: 100%;
   height: 100%;
+  /* object-fit: cover; */
 }
 
 .project-tile {
@@ -170,13 +196,45 @@ div .project-tile:hover .inside {
 }
 
 #contact-section {
-  background-color: var(--blueish);
+  background-color: var(--blackish);
+  color: var(--whitish);
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
+  height: 40vh;
+  padding: 2rem 0;
 }
 
-footer {
-  background-color: var(--pinkish);
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+  /* background-color: blue; */
+}
+
+.social a i {
+  font-size: 1.5rem;
+  border: 1px solid var(--whitish);
+  /* padding: 1rem; */
+  border-radius: 50%;
+}
+
+.i-facebook {
+  padding: 1rem 1.3rem;
+  /* background-color: black; */
+}
+
+.i-twitter,
+.i-instagram,
+.i-linkedin,
+.i-github {
+  padding: 1rem;
+}
+
+.social a i:hover {
+  background-color: var(--whitish);
+  color: var(--blackish);
+  /* border-radius: 50%; */
+  transition: all 0.3s ease 0s;
 }
