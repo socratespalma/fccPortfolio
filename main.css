@@ -1,6 +1,6 @@
 :root {
   --blackish: #333;
-  --blueish: #6c8ead;
+  --blueish: #496a81;
   --pinkish: #fbbfca;
   --red: #a23e48;
   --bronze: #d58936;
@@ -55,7 +55,6 @@ body {
 
 #navbar div {
   width: 60vw;
-  /* background-color: red; */
   text-align: right;
 }
 
@@ -63,9 +62,12 @@ body {
   padding: 0 1vw 0.3rem;
 }
 
+#navbar div a:nth-child(3) {
+  padding-right: 0;
+}
+
 #navbar div a:hover {
   border-bottom: 1px solid var(--whitish);
-  /* padding-bottom: 0.3rem; */
   transition: all 0.3s ease 0s;
 }
 
@@ -103,7 +105,6 @@ body {
   margin-top: 1rem;
   border-radius: 8px;
   font-size: 1.2rem;
-  /* margin-right: 50vw; */
 }
 
 #projects {
@@ -115,13 +116,10 @@ body {
 }
 
 #projects h2 {
-  /* text-align: center; */
-  /* padding-top: 5%; */
   font-size: 2rem;
 }
 
 .project-grid {
-  /* make padding wider in media queries when screensize decreases */
   padding: 3rem 9vw 3rem;
   display: grid;
   justify-content: center;
@@ -141,7 +139,6 @@ body {
 .project-grid img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
 }
 
 .project-tile {
@@ -208,26 +205,26 @@ div .project-tile:hover .inside {
 
 .social {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 500px;
-  /* background-color: blue; */
 }
 
 .social a i {
   font-size: 1.5rem;
   border: 1px solid var(--whitish);
-  /* padding: 1rem; */
   border-radius: 50%;
 }
 
 .i-facebook {
   padding: 1rem 1.3rem;
-  /* background-color: black; */
+}
+
+.i-instagram,
+.i-linkedin {
+  padding: 1rem 1.1rem;
 }
 
 .i-twitter,
-.i-instagram,
-.i-linkedin,
 .i-github {
   padding: 1rem;
 }
@@ -235,6 +232,113 @@ div .project-tile:hover .inside {
 .social a i:hover {
   background-color: var(--whitish);
   color: var(--blackish);
-  /* border-radius: 50%; */
   transition: all 0.3s ease 0s;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 1900px) {
+  #navbar {
+    max-height: 6vh;
+  }
+
+  .logo {
+    border: 0.16rem solid var(--whitish);
+    padding: 0.21rem;
+  }
+
+  #contact-section {
+    max-height: 30vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  #welcome-section {
+    padding: 9rem 0;
+  }
+
+  #contact-section {
+    max-height: 25vh;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  #welcome-section {
+    text-align: center;
+    padding: 9rem 9vw;
+  }
+
+  #welcome-section div {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .social {
+    max-width: 468px;
+  }
+
+  #contact-section {
+    max-height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #navbar {
+    padding: 0 3vw;
+  }
+
+  #navbar div {
+    width: 70vw;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 3vw 3rem;
+  }
+
+  #welcome-section {
+    text-align: center;
+    padding: 9rem 0;
+  }
+
+  #welcome-section div {
+    max-width: 100%;
+    padding: 0 3vw;
+    margin: 0;
+  }
+
+  .social {
+    max-width: 100%;
+    padding: 0 3vw;
+  }
+
+  #contact-section p {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  #contact-section {
+    max-height: 50vh;
+  }
 }
